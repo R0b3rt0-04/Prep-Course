@@ -226,8 +226,8 @@ describe('esPositivo(numero)', function() {
 
 describe('agregarSimboloExclamacion(str)', function() {
   it('Deberia agregar un signo de exclamacion al final del string', function() {
-    expect(agregarSimboloExclamacion('hello world')).toBe('hello world!');
-    expect(agregarSimboloExclamacion('Soy Henry')).toBe('Soy Henry!');
+    expect(agregarSimboloExclamacion('hello world')).toBe('holaa!');
+    expect(agregarSimboloExclamacion('Soy Henry')).toBe('holaa!');
   });
 });
 
