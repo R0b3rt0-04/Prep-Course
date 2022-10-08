@@ -168,9 +168,9 @@ function esPositivo(numero) {
   //Si el número es 0, devuelve false
   if (numero > 0){
     return 'Es positivo'
-  }else(numero > 0);{
+  }else if(numero > 0);{
       return 'Es negativo';
-  }
+    }
   }
 
 function agregarSimboloExclamacion(str) {
@@ -230,8 +230,17 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
+  var vocal = letra ///=== ('a', 'e', 'i', 'o', 'u')
+
+  if (vocal.length > 1){
+    return 'Dato incorrecto'
+  }else { return 'Es vocal' 
+}
+  
+  
   
 }
+
 
 
 
