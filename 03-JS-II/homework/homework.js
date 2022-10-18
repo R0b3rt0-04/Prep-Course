@@ -75,7 +75,7 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
-  if(color == 'blue'){
+ /*  if(color == 'blue'){
   return 'This is blue';
     }else if(color == 'red'){
     return 'This is red';
@@ -85,24 +85,24 @@ function colors(color) {
           return 'This is orange'
         }else {
           return 'Color not found'
-        }  
-        /* let car =color
-        switch (car){
-          case "blue":
+        }   */
+        switch (color) {
+          case 'blue':
             return 'This is blue'
             break;
-            case 'red':
-            return 'This is red'  **A QUIEN EVALÚE ESTO; NO ME HAN ENSEÑADO ESTO AUN, ENTONCES TENDRE QUE USAR EL FABULOSO IF (;**
-            break;
-            case 'green':
+          case 'red':
+            return 'This is red'
+            break
+          case 'green':
             return 'This is green'
             break;
-            case 'Orange':
+          case 'orange':
             return 'This is orange'
-            break;
-            default:
-              'Color not found';}
- */
+            break
+          default:
+            return 'Color not found';
+          break;
+        }
 }     
 
 function esDiezOCinco(numero) {
@@ -183,7 +183,7 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   let primo = numero / numero 
-  return (primo === 1)
+  return (primo === 1 && numero > 1)
 }
 
 function esVerdadero(valor){
@@ -205,8 +205,15 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
 
+  let result = [];
+let i = -6;
 
+do {
+  i = i + 6;
+  result = result + i + ', ';
+} while (i < 60);
 
+console.log(result);
   
 }
 
@@ -227,8 +234,9 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Usar el bucle do ... while.
 
-
-
+do {
+  numero + 5
+} while (numero );
 
 }
 
