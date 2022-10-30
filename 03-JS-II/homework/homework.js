@@ -5,7 +5,12 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
- return Math.floor(x, y)
+ 
+ if(x == y){
+  return x;
+}else if(x > y){
+  return x;
+ }else return y;
 
 
 }
@@ -109,13 +114,8 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
- if (numero == 5){
-  return true 
- }else if(numero == 10){
-  return true  
- }else {
-  return false
- }
+ return (numero == 10 || numero === 5);
+ 
  }
 
 
@@ -137,11 +137,7 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
- if (numero !== Math.round(numero)){
-   return false
- }else {
-  return true
- }
+ return (numero === Math.round(numero))
   
  }
 
@@ -171,8 +167,9 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-
-
+if(0 === num1, num2, num3){
+  return 'Error'
+}else return false
 
 }
 
@@ -182,8 +179,9 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  let primo = numero / numero 
-  return (primo === 1 && numero > 1)
+  let primo = numero / numero;
+  let primo2 = numero / 1;
+  return (primo === 1 || primo2 === numero);
 }
 
 function esVerdadero(valor){
@@ -204,18 +202,15 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
+  let tabla = [];
 
-  let result = [];
-let i = -6;
-
-do {
-  i = i + 6;
-  result = result + i + ', ';
-} while (i < 60);
-
-console.log(result);
+  for(var i = 0; i < 11; i++){
+    tabla.push(( i * 6))
+  }return tabla;
   
 }
+
+
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
@@ -234,9 +229,11 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Usar el bucle do ... while.
 
-do {
-  numero + 5
-} while (numero );
+  let nnum = numero
+
+for(let i = 0; i < 8; i++){
+ nnum += 5
+}return nnum
 
 }
 
