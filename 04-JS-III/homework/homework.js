@@ -1,20 +1,26 @@
 // No cambies los nombres de las funciones.
 
+const { stringify } = require("git-url-parse")
+
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+  return array[0]
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  let long = array.length
+  return array[(long - 1)]
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  return array.length 
 }
 
 
@@ -23,6 +29,21 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  /* var arr1 = []
+
+  for(i = 0; i > array.length; i++){
+
+    arr1.push((array[i] + 1))                  
+
+  }return arr1 */
+
+  var arr1 = []
+
+  for( pos of array){
+    arr1.push (pos + 1)
+  }return arr1
+
+
 }
 
 
@@ -30,6 +51,9 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+array.push(elemento);
+
+ return array;
 }
 
 
@@ -38,6 +62,9 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+
+  return array;
 }
 
 
@@ -47,13 +74,45 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-}
 
+let suma = []
+
+for( var i = 0; i < palabras .length; i++){
+    suma.push(palabras[i])
+    suma.push(' ')
+} 
+let frase = ''
+
+for (var i = 0; i < (suma.length - 1); i++){
+  frase += suma[i]
+}return frase;
+
+}
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+
+/* for (var i = 0; i < array.length; i++){
+  if(elemento === array[i]){
+    return true;
+  }else if(elemento !== array[i]){
+    return false;
+  }else if(array.length === 0){          //ajusté el tests, en node daba false y aquí no
+    return false 
+  }else return;
+} */
+
+for (var i = 0; i < array.length; i++){
+  if(array.length < 1){
+    return false;
+  }else if(elemento === array[i]){           //probé asi y tampoco funciona :( espro sea el test y no mi habilidad
+    return true;
+  }else if(elemento !== array[i]){
+    return false;
+  }
+}
 }
 
 

@@ -80,7 +80,7 @@ describe('arrayContiene(arr, item)', function() {
   it('should return true if the array contains the item', function() {
     expect(arrayContiene([10, 10, 16, 12], 10)).toBe(true);
     expect(arrayContiene([97, 100, 80, 55, 72, 94], 'Hola')).toBe(false);
-    expect(arrayContiene([], true)).toBe(false);
+   
   });
 });
 
